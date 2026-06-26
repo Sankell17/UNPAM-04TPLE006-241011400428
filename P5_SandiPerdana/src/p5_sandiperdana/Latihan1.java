@@ -4,7 +4,9 @@
  */
 package p5_sandiperdana;
 
-import static java.time.Clock.system;
+import java.io.InputStream;
+import static java.time.InstantSource.system;
+import java.util.Scanner;
 
 /**
  *
@@ -26,6 +28,7 @@ public class Latihan1 {
         int nilai = input.nextlnt();
         
         system.out.print("Masukkan jumlah kehadiran (max21); ");
+        int hadir;
         
     //validasi input kehadiran
         if(hadir <0 || hadir > totalPertemuan){
@@ -50,3 +53,9 @@ public class Latihan1 {
 system.out.println("Presentase Kehadiran:" + persen + "%");
 system.out.println("Nilai:" + grade);
                 }
+
+    private static class scanner extends Scanner {
+
+        public scanner(InputStream in) {
+        }
+    }
